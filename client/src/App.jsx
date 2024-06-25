@@ -11,6 +11,7 @@ import Register from "./routes/register/register";
 import { listPageLoader, profilePageLoader, singlePageLoader } from "./lib/loaders";
 import AboutPage from "./routes/aboutPage/aboutPage";
 
+
 function App() {
   const router = createBrowserRouter([
     {

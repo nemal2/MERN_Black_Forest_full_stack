@@ -44,7 +44,7 @@
     justify-content: space-between;
 
     .top {
-      background-color: #f7c14b85;
+      background-color: rgba(147, 218, 56, 0.529);
       padding: 20px;
       font-weight: bold;
       display: flex;
@@ -85,31 +85,36 @@
 
         span{
           font-size: 12px;
-          background-color: #f7c14b39;
+          
+          background-color: rgba(210, 254, 153, 0.529);
           padding: 2px;
           border-radius: 5px;
         }
       }
     }
     .bottom {
-      border-top: 2px solid #f7c14b85;
+      border-top: 2px solid rgba(147, 218, 56, 0.529);
+      
       height: 60px;
       display: flex;
       align-items: center;
       justify-content: space-between;
+      
 
       textarea{
         flex:3;
         height: 100%;
         border: none;
         padding: 20px;
+        
       }
 
       button{
         flex:1;
-        background-color: #f7c14b85;
+        background-color: rgba(147, 218, 56, 0.529);
         height: 100%;
         border: none;
+        font-size: 14px;
         cursor: pointer;
       }
     }

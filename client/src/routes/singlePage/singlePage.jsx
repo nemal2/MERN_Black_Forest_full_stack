@@ -22,7 +22,8 @@ function SinglePage() {
     }
 
     try {
-      await apiRequest.post("/messages", { chatId: post.userId });
+      await apiRequest.post(`/chats`, { receiverId: post.userId });
+      navigate("/");
     } catch (err) {
       console.log(err);
     }
@@ -140,8 +141,7 @@ function SinglePage() {
             <Map items={[post]} />
           </div>
           <div className="buttons">
-            <button>
-            onClick={handleChat}
+            <button onClick={handleChat}>
               <img src="/chat.png" alt="" />
               Send a Message
             </button>

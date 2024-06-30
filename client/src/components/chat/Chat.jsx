@@ -90,7 +90,7 @@ function Chat({ chats }) {
             style={{
               backgroundColor: c.seenBy.includes(currentUser.id) || chat?.id===c.id
                 ? "white"
-                : "#fecd514e",
+                : "rgba(147, 218, 56, 0.529)",
             }}
             onClick={() => handleOpenChat(c.id, c.receiver)}
           >

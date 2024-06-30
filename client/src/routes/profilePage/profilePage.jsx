@@ -48,7 +48,7 @@ function ProfilePage() {
             <button onClick={handleLogout}>Logout</button>
           </div>
           <div className="title">
-            <h1>My List</h1>
+            <h1>Posted by Me</h1>
             <Link to="/add">
             <button>Create New Post</button>
             </Link>

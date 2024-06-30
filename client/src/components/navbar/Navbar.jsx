@@ -24,7 +24,7 @@ function Navbar() {
         <a href="/">Home</a>
         <a href="/about">About</a>
         <a href="/">Tools</a>
-        <a href="/donate">Donate</a>
+        <a href="/pay">Donate</a>
       </div>
       <div className="right">
         {currentUser ? (
@@ -56,7 +56,7 @@ function Navbar() {
           <a href="/">Home</a>
           <a href="/about">About</a>
           <a href="/">Tools</a>
-          <a href="/donate">Donate</a>
+          <a href="/pay">Donate</a>
           <a href="/login">Sign in</a>
           <a href="/register">Sign up</a>
         </div>

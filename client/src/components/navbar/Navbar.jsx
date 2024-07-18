@@ -23,8 +23,8 @@ function Navbar() {
         </a>
         <a href="/">Home</a>
         <a href="/about">About</a>
-        <a href="/">Tools</a>
-        <a href="/pay">Donate</a>
+        <a href="/detect">Tools</a>
+        <a href="/contact">Help</a>
       </div>
       <div className="right">
         {currentUser ? (
@@ -55,8 +55,8 @@ function Navbar() {
         <div className={open ? "menu active" : "menu"}>
           <a href="/">Home</a>
           <a href="/about">About</a>
-          <a href="/">Tools</a>
-          <a href="/pay">Donate</a>
+          <a href="/detect">Tools</a>
+          <a href="/contact">Help</a>
           <a href="/login">Sign in</a>
           <a href="/register">Sign up</a>
         </div>

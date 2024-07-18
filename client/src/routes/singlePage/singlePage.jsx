@@ -40,6 +40,7 @@ function SinglePage() {
       await apiRequest.post("/users/save", { postId: post.id });
     } catch (err) {
       console.log(err);
+      
       setSaved((prev) => !prev);
     }
   };
@@ -122,14 +123,14 @@ function SinglePage() {
               </div>
             </div>
             <div className="feature">
-              <img src="/pet.png" alt="" />
+              <img src="/blast.png" alt="" />
               <div className="featureText">
                 <span>Explosive Rate</span>
                 <p>{post.postDetail.bus} %</p>
               </div>
             </div>
             <div className="feature">
-              <img src="/fee.png" alt="" />
+              <img src="/bio.png" alt="" />
               <div className="featureText">
                 <span>Bio Chemical Rate</span>
                 <p>{post.postDetail.restaurant} %</p>

@@ -12,9 +12,10 @@ function HomePage() {
     <div className="homePage">
       <div className="textContainer">
         <div className="wrapper">
-          <h1 className="title">Cross Nation Intellgence Platform</h1>
+          <h1 className="title">BLACK  FOREST</h1>
+          <h1 className="title1">Cross Nation Inteligence Service Platform</h1>
           <p>
-          Join us in our mission to create a world where safety and security transcend borders. By working together, we can dismantle terrorist networks, prevent attacks, and protect innocent lives. The Cross-Nation Intelligence Platform is not just a platform, but it is a commitment to global peace and security.
+          {">>"} Join us in our mission to create a world where safety and security transcend borders. By working together, we can dismantle terrorist networks, prevent attacks, and protect innocent lives. The Cross-Nation Intelligence Platform is not just a platform, but it is a commitment to global peace and security...
           </p>
           <SearchBar />
           <div className="boxes">

@@ -6,15 +6,35 @@
 
   .textContainer {
     flex: 3;
+    
 
     .wrapper {
+      
       padding-right: 100px;
       display: flex;
       flex-direction: column;
       justify-content: center;
-      gap: 50px;
+      //gap: 50px;
       height: 100%;
+      //font-size: 17px;
+      //font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      //text-align: justify;
+  //text-justify: inter-word;
 
+  p{
+    font-size: 16px;
+    font-family: 'Courier New', Courier, 'Lucida Console', Monaco, monospace;
+      text-align: justify;
+  text-justify: inter-word;
+  margin-bottom: 50px;
+  color: #000000;
+  
+
+  @include sm {
+    margin-bottom: 50px;
+    margin-top: 20px;
+  }
+  }
       @include lg{
         padding-right: 50px;
       }
@@ -29,22 +49,52 @@
 
       .title {
         font-size: 64px;
+        font-weight: bold;
+        color: #000000;
+        text-transform: uppercase;
+        margin-bottom: 8px;
+        margin-top: 10px;
+        
 
         @include lg {
+          font-size: 55px;
+        }
+        @include sm {
           font-size: 48px;
+          margin-top: 25px;
         }
       }
 
+      .title1{
+        font-size: 33px;
+        font-weight: normal;
+        color: #555;
+        margin-top: 0;
+        margin-bottom: 35px;
+
+
+        @include lg {
+          font-size: 27px;
+        }
+        @include sm {
+          margin-bottom: 25px;
+          font-size: 24px;
+        }
+      }  
+
       .boxes {
+        margin-top: 50px;
         display: flex;
         justify-content: space-between;
 
         @include sm {
           display: none;
+          
         }
 
         h1 {
           font-size: 36px;
+          
 
           @include lg {
             font-size: 32px;

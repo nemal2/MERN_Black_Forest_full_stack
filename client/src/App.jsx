@@ -10,9 +10,9 @@ import Login from "./routes/login/login";
 import Register from "./routes/register/register";
 import { listPageLoader, profilePageLoader, singlePageLoader } from "./lib/loaders";
 import AboutPage from "./routes/aboutPage/aboutPage";
-import SuccessPage from "./routes/paysuccess/success";
-import PayPage from "./routes/pay/pay";
-import CancelPage from "./routes/paycancel/cancel";
+
+import DetectPage from "./routes/detectPage/detectPage";
+import ContactPage from "./routes/contactPage/contactPage";
 
 
 function App() {
@@ -38,17 +38,10 @@ function App() {
           element: <AboutPage />,
         },
         {
-          path: "/pay",
-          element: <PayPage />,
+          path: "/contact",
+          element: <ContactPage />,
         },
-        {
-          path: "/success",
-          element: <SuccessPage/>,
-        },
-        {
-          path: "/cancel",
-          element: <CancelPage />,
-        },
+        
       ],
     },
 
@@ -78,6 +71,10 @@ function App() {
         {
           path: "/add",
           element: <NewPostPage />,
+        },
+        {
+          path: "/detect",
+          element: <DetectPage />,
         },
       ],
     },

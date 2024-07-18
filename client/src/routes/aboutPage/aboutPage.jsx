@@ -10,17 +10,17 @@ function AboutPage() {
         <div className="wrapper">
           <h1 className="title">About Us</h1>
           <p className="para">
-          Join us in our mission to create a world where safety and security transcend borders. By working together, we can dismantle terrorist networks, prevent attacks, and protect innocent lives. The Cross-Nation Intelligence Platform is not just a platform, but it is a commitment to global peace and security.
+           A dedicated platform committed to combating terrorism on a global scale. Our mission is to foster international collaboration and intelligence sharing to prevent and address terrorist activities. By leveraging cutting-edge technology and a vast network of partners, we aim to provide timely information, resources, and support to governments, law enforcement agencies, and the general public. Together, we can create a safer world for all.
           </p>
         
           <div className="boxes">
             <div className="box">
-              <h1>100+</h1>
-              <h2>Collaborated Nations</h2>
+              <h1>UN Branch</h1>
+              <h2>Paris, France</h2>
             </div>
             <div className="box">
-              <h1>3k+</h1>
-              <h2>Succesful Operations</h2>
+              <h1>Asia United</h1>
+              <h2>Tokyo, Japan</h2>
             </div>
            
           </div>

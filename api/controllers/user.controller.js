@@ -94,6 +94,7 @@ export const savePost = async (req, res) => {
       },
     });
 
+
     if (savedPost) {
       await prisma.savedPost.delete({
         where: {
@@ -128,6 +129,7 @@ export const profilePosts = async (req, res) => {
         post: true,
       },
     });
+
 
     const savedPosts = saved.map((item) => item.post);
     res.status(200).json({ userPosts, savedPosts });

@@ -2,7 +2,10 @@ import { Server, Socket } from "socket.io";
 
 const io = new Server({
   cors: {
-    origin: "http://localhost:5173",
+    origin: [
+      "http://localhost:5173", // Development origin
+      "https://black-forest.vercel.app" // Production origin
+    ],
   },
 });
 

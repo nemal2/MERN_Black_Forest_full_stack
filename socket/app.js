@@ -3,7 +3,7 @@ import { Server, Socket } from "socket.io";
 const io = new Server({
   cors: {
     origin: [
-      "https://mern-black-forest-full-stack.onrender.com", // Development origin
+      "http://localhost:5173", // Development origin
       "https://black-forest.vercel.app" // Production origin
     ],
   },

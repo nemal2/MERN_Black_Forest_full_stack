@@ -4,7 +4,8 @@ const io = new Server({
   cors: {
     origin: [
       
-      "https://black-forest.vercel.app" // Production origin
+      "https://black-forest.vercel.app" ,// Production origin 
+      "https://mern-black-forest-socket.onrender.com"
     ],
   },
 });

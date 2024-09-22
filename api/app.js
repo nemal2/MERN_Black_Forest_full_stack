@@ -15,7 +15,8 @@ const app = express();
 //const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
 //const stripe = new Stripe(process.env.STRIPE_SECRET_KEY); 
 
-app.use(cors({ origin: process.env.CLIENT_URL, credentials: true}))
+//app.use(cors({ origin: process.env.CLIENT_URL, credentials: true}))
+app.use(cors({ origin: '*', credentials: true}))
 app.use(express.json())
 app.use(cookieParser())
 

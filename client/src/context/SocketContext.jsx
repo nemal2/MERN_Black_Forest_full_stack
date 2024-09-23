@@ -9,7 +9,7 @@ export const SocketContextProvider = ({ children }) => {
   const [socket, setSocket] = useState(null);
 
   useEffect(() => {
-    setSocket(io("https://black-forest-agent-service-soc.vercel.app"));
+    setSocket(io("https://mern-black-forest-socket.onrender.com"));
   }, []);
 
   useEffect(() => {

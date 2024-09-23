@@ -6,7 +6,7 @@ const io = new Server({
       
       "https://black-forest.vercel.app" ,// Production origin 
       "https://mern-black-forest-socket.onrender.com",
-      "https://mern-black-forest-full-stack.onrender.com/api"
+     
     ],
   },
 });

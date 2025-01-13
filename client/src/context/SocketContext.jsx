@@ -9,7 +9,7 @@ export const SocketContextProvider = ({ children }) => {
   const [socket, setSocket] = useState(null);
 
   useEffect(() => {
-    setSocket(io("https://mern-black-forest-socket.onrender.com"));
+    setSocket(io("http://localhost:4000"));
   }, []);
 
   useEffect(() => {

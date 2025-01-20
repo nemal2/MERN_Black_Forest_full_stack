@@ -78,6 +78,22 @@ model User {
   savedPosts SavedPost[] //each user can have multiple savedposts
   chats      Chat[]      @relation(fields: [chatIDs], references: [id])
   chatIDs    String[]    @db.ObjectId
+  role                String    @default("USER")
+  failedLoginAttempts Int       @default(0)
+  lastLoginAttempt    DateTime  @default(now())
+  securityLog        SecurityLog[]
+  
+}
+
+model SecurityLog {
+  id          String   @id @default(auto()) @map("_id") @db.ObjectId
+  userId      String?  @db.ObjectId
+  user        User?    @relation(fields: [userId], references: [id])
+  eventType   String
+  ipAddress   String
+  userAgent   String
+  details     String?
+  createdAt   DateTime @default(now())
 }
 
 model Chat {

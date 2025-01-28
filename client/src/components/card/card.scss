@@ -96,6 +96,19 @@
           &:hover {
             background-color: lightgray;
           }
+          &.delete {
+            background-color: #ffffff;
+            //border-color: #121010;
+            
+            &:hover {
+              background-color: lightgray;
+            }
+
+            img {
+              width: 20px;
+              height: 25px;
+            }
+          }
         }
       }
     }

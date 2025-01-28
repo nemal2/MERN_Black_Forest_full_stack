@@ -3,10 +3,16 @@ import Filter from "../../components/filter/Filter"
 import Card from "../../components/card/Card"
 import Map from "../../components/map/Map";
 import { Await, useLoaderData } from "react-router-dom";
-import { Suspense } from "react";
+import { Suspense, useState } from "react";
 
 function ListPage() {
-  const data = useLoaderData()
+  const data = useLoaderData();
+  const [posts, setPosts] = useState([]);
+
+  // Handle post deletion
+  const handleDeletePost = (deletedPostId) => {
+    setPosts(prevPosts => prevPosts.filter(post => post.id !== deletedPostId));
+  };
 
   return <div className="listPage">
     <div className="listContainer">
@@ -19,7 +25,11 @@ function ListPage() {
             >
               {(postResponse) =>
                 postResponse.data.map((post) => (
-                  <Card key={post.id} item={post} />
+                  <Card 
+                    key={post.id} 
+                    item={post} 
+                    onDelete={handleDeletePost}
+                  />
                 ))
               }
             </Await>

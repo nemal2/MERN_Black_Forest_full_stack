@@ -3,11 +3,22 @@ import Filter from "../../components/filter/Filter"
 import Card from "../../components/card/Card"
 import Map from "../../components/map/Map";
 import { Await, useLoaderData } from "react-router-dom";
-import { Suspense, useState } from "react";
+import { Suspense, useState, useEffect } from "react";
 
 function ListPage() {
   const data = useLoaderData();
   const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+
+  useEffect(() => {
+    if (data.postResponse) {
+      data.postResponse.then(response => {
+        setPosts(response.data);
+        setLoading(false);
+      });
+    }
+  }, [data.postResponse]);
 
   // Handle post deletion
   const handleDeletePost = (deletedPostId) => {
@@ -19,20 +30,17 @@ function ListPage() {
       <div className="wrapper">
         <Filter/>
         <Suspense fallback={<p>Loading...</p>}>
-            <Await
-              resolve={data.postResponse}
-              errorElement={<p>Error loading posts!</p>}
-            >
-              {(postResponse) =>
-                postResponse.data.map((post) => (
-                  <Card 
-                    key={post.id} 
-                    item={post} 
-                    onDelete={handleDeletePost}
-                  />
-                ))
-              }
-            </Await>
+        {loading ? (
+              <p>Loading...</p>
+            ) : (
+              posts.map((post) => (
+                <Card 
+                  key={post.id} 
+                  item={post} 
+                  onDelete={handleDeletePost}
+                />
+              ))
+            )}
           </Suspense>
       </div>
     </div>
